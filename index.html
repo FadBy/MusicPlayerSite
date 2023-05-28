@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Мультимедиа 4</title>
+  <link rel="stylesheet" href="main_style.css">
+  <style>
+    .eq_bar {
+      width: 10px;
+      height: 100px;
+      background-color: #ccc;
+      margin: 0 2px;
+      display: inline-block;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background-image"></div>
+  <div class="overlay"></div>
+  <div class="player-container">
+    <div style="display: block">
+      <img id="icon" src="music-icons/gigachad.jpg" class="music-icon">
+    </div>
+    <div class="controls">
+      <div class="buttons">
+        <button class="control-button" onclick="previous()">
+          <img src="ui/backward.svg" alt="Rewind">
+        </button>
+        <button class="control-button" onclick="togglePlayPause()">
+          <img id="play-pause-button" src="ui/play.svg" alt="Play">
+        </button>
+        <button class="control-button" onclick="next()">
+          <img src="ui/forward.svg">
+        </button>
+      </div>
+      <input class="progress_bar" type="range" id="progress-bar" min="0" max="100" value="0" oninput="seek()">
+      
+    </div>
+    <canvas id="equalizer2" style="border-radius: 10px;"></canvas>
+
+  </div>
+  <!-- <div class="eq_container"></div> -->
+  <audio id="player" src="music/gigachad.mp3"></audio>
+  <canvas id="equalizer"></canvas>
+
+  <script src="script.js"></script>
+  <script src="equalizer.js"></script>
+</body>
+
+</html>
